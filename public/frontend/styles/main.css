@@ -165,7 +165,7 @@ header .btn-get-started:hover {
 }
 .section-testimonial-content .card-testimonial a {
   font-weight: normal;
-  color: black;
+  color: #6E6E6E;
 }
 .section-testimonial-content .card-testimonial .testimonial-content {
   min-height: 380px;
@@ -408,4 +408,43 @@ header .btn-get-started:hover {
   background-color: #04153d;
   color: white;
   border-radius: 0;
+}
+
+.login-container {
+  width: 100vw;
+  height: 100vh;
+}
+@media (min-width: 992px) {
+  .login-container {
+    background: linear-gradient(90deg, #ffffff 60%, #E4E6EB 40%);
+  }
+}
+
+.page-login {
+  height: 100vh;
+}
+.page-login .btn-login {
+  font-weight: bolder;
+  background-color: #FF9E53;
+  color: white;
+  border-radius: 0;
+}
+.page-login .btn-login:hover {
+  color: white;
+  border-radius: 0;
+}
+.page-login .section-left h1 {
+  font-family: "Playfair Display";
+  font-weight: bold;
+  font-size: 50px;
+  text-align: left;
+  color: #071C4D;
+}
+.page-login .section-right a {
+  font-family: Assistant;
+  font-weight: 300;
+  text-decoration: underline;
+  font-size: 16px;
+  text-align: center;
+  color: #bfbfbf;
 }/*# sourceMappingURL=main.css.map */

@@ -2,12 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\TransactionSuccess;
 use App\Models\Transaction;
 use App\Models\TransactionDetail;
 use App\Models\TravelPackage;
 use Carbon\carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
+use Midtrans\Config;
+use Midtrans\Snap;
 
 class CheckoutController extends Controller
 {
@@ -109,11 +113,71 @@ class CheckoutController extends Controller
     }
 
     public function success(Request $request, $id){
-        $transaction = Transaction::findOrFail($id);
+        $transaction = Transaction::with(['details','travel_package.galleries','user'])
+        ->findOrFail($id);
+        // dd($transaction->user);
+
         $transaction->transaction_status = 'PENDING';
+
 
         $transaction->save();
 
-        return view('pages.success');
+        //set config midtrans
+        Config::$serverKey = config('midtrans.serverKey');
+        Config::$isProduction = config('midtrans.isProduction');
+        Config::$isSanitized = config('midtrans.isSanitized');
+        Config::$is3ds = config('midtrans.is3ds');
+
+        $enable_payments = array(
+            "gopay",
+            "permata_va",
+            "bca_va",
+            "bni_va",
+            "other_va",
+            "Indomaret"
+        );
+        $credit_card['secure'] = true;
+
+        //kirim array ke midtrans
+        $midtrans_param = [
+            'transaction_details' => [
+                'order_id' => 'Trans-' . $transaction->id,
+                'gross_amount' => (int) $transaction->transaction_total
+            ],
+            'customer_details' => [
+                'first_name' => $transaction->user->name,
+                'email' => $transaction->user->email
+            ],
+            'enabled_payments' => $enable_payments,
+            'vtweb' => []
+        ];
+
+        try {
+            //ambil halaman payment midtrans
+            $paymentUrl = Snap::createTransaction($midtrans_param)->redirect_url;
+            // dd($paymentUrl);
+            //redirect ke halaman midtrans
+            return redirect($paymentUrl);
+            // header('Location: ' . $paymentUrl);
+        } catch (Exception $e) {
+            echo $e->getMassage();
+        }
+
+        //kirim email ke user
+        // Mail::to($transaction->user->email)->send(
+        //     new TransactionSuccess($transaction)
+        // );
+
+
+        // return view('pages.success');
+    }
+
+    public function detail(Request $request, $id){
+        $item = Transaction::with(['details', 'travel_package', 'user'])->findOrFail($id);
+        // dd($item->travel_package->galleries[0]->image);
+
+        return view('pages.check-detail', [
+            'item' => $item
+        ]);
     }
 }

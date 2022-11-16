@@ -5,7 +5,7 @@
                 <img src="{{ url('frontend/images/logo_nomads.png') }}" alt="Logo NOMADS">
             </a>
 
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navb"
+            <button class="navbar-toggler" style="z-index: 1000" type="button" data-bs-toggle="collapse" data-bs-target="#navb"
                 aria-controls="navb" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -73,6 +73,7 @@
                     onclick="event.preventDefault(); location.href='{{ route('login') }}';">
                     Login
                     </button>
+
                 </form>
                 @endguest
 

@@ -2,6 +2,7 @@
 
 // use App\Http\Controllers\Admin\DashboardController;
 
+use App\Models\Transaction;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Route;
 
@@ -19,7 +20,13 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => true]);
 
 Route::get('test', function(){
-    return Hash::make('12345678');
+    $data = Transaction::with(['details', 'travel_package.galleries', 'user'])
+    ->findOrFail(21);
+    // return $data->details;
+    return view('email.transaction-success', [
+        'data' => $data
+    ]);
+    // return Hash::make('12345678');
 });
 
 Route::get('/', 'App\Http\Controllers\HomeController@index')
@@ -48,6 +55,10 @@ Route::get('/checkout/confirm/{id}', 'App\Http\Controllers\CheckoutController@su
 ->name('checkout-success')
 ->middleware(['auth', 'verified']);
 
+Route::get('/check-detail/{id}', 'App\Http\Controllers\CheckoutController@detail')
+->name('checkdetail')
+->middleware(['auth', 'verified']);
+
 
 Route::prefix('admin')
 ->namespace('App\Http\Controllers\Admin')
@@ -60,3 +71,9 @@ Route::prefix('admin')
     Route::resource('gallery', 'GalleryController');
     Route::resource('transaction', 'TransactionController');
     });
+
+    //midtrans
+    Route::post('/midtrans/callback', 'App\Http\Controllers\MidtransController@notificationHandler');
+    Route::get('/midtrans/finish', 'App\Http\Controllers\MidtransController@finishRedirect');
+    Route::get('/midtrans/unfinish', 'App\Http\Controllers\MidtransController@unfinishRedirect');
+    Route::get('/midtrans/error', 'App\Http\Controllers\MidtransController@errorRedirect');

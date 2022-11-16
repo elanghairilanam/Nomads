@@ -47,6 +47,29 @@
                         </div>
                         @endif
 
+                        {{-- <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            @foreach ($item->galleries as $gallery)
+                            <div class="carousel-item active">
+                            <img class="d-block w-100" src="{{ Storage::url($gallery->image) }}" alt="First slide">
+                            </div>
+                            @endforeach
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                        </div> --}}
+
                         <div>
                             <h2>Tentang Wisata</h2>
                             <p>
@@ -84,11 +107,11 @@
                     <div class="card card-details card-right">
                         <h2>Members are going</h2>
                         <div class="members my-2 mr-1">
-                            <img src="frontend/images/member1.png" class="member-image">
-                            <img src="frontend/images/member2.png" class="member-image">
-                            <img src="frontend/images/member3.png" class="member-image">
-                            <img src="frontend/images/member4.png" class="member-image">
-                            <img src="frontend/images/member5.png" class="member-image">
+                            <img src="{{ url('frontend/images/member1.png') }}" class="member-image">
+                            <img src="{{ url('frontend/images/member2.png') }}" class="member-image">
+                            <img src="{{ url('frontend/images/member3.png') }}" class="member-image">
+                            <img src="{{ url('frontend/images/member4.png') }}" class="member-image">
+                            <img src="{{ url('frontend/images/member5.png') }}" class="member-image">
                         </div>
                         <hr>
                         <h2>Trip Information</h2>
