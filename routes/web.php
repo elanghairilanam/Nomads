@@ -73,7 +73,7 @@ Route::prefix('admin')
     });
 
     //midtrans
-    Route::post('/midtrans/callback', 'App\Http\Controllers\MidtransController@notificationHandler');
+    Route::get('/midtrans/callback', 'App\Http\Controllers\MidtransController@notificationHandler');
     Route::get('/midtrans/finish', 'App\Http\Controllers\MidtransController@finishRedirect');
     Route::get('/midtrans/unfinish', 'App\Http\Controllers\MidtransController@unfinishRedirect');
     Route::get('/midtrans/error', 'App\Http\Controllers\MidtransController@errorRedirect');
