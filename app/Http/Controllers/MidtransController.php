@@ -25,7 +25,7 @@ class Midtranscontroller extends Controller
         $order = explode('-', $notification->order_id);
 
         //assign ke variable
-        $status = $$notification->transaction_status;
+        $status = $notification->transaction_status;
         $type = $notification->payment_type;
         $fraud = $notification->fraud_status;
         $order_id = $order[1];
