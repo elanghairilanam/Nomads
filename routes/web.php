@@ -20,12 +20,15 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => true]);
 
 Route::get('test', function(){
-    $data = Transaction::with(['details', 'travel_package.galleries', 'user'])
-    ->findOrFail(21);
+    // $data = Transaction::with(['details', 'travel_package.galleries', 'user'])
+    // ->findOrFail(21);
     // return $data->details;
-    return view('email.transaction-success', [
-        'data' => $data
-    ]);
+    // return view('email.transaction-success', [
+    //     'data' => $data
+    // ]);
+
+    // $e = explode('-', 'Trans-34');
+    // return $e[1];
     // return Hash::make('12345678');
 });
 
@@ -73,7 +76,7 @@ Route::prefix('admin')
     });
 
     //midtrans
-    Route::get('/midtrans/callback', 'App\Http\Controllers\MidtransController@notificationHandler');
+    Route::post('/midtrans/callback', 'App\Http\Controllers\MidtransController@notificationHandler');
     Route::get('/midtrans/finish', 'App\Http\Controllers\MidtransController@finishRedirect');
     Route::get('/midtrans/unfinish', 'App\Http\Controllers\MidtransController@unfinishRedirect');
     Route::get('/midtrans/error', 'App\Http\Controllers\MidtransController@errorRedirect');
