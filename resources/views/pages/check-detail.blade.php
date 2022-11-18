@@ -6,9 +6,8 @@
 <main>
     <div class="position-relative container-sm">
         <h1 class="text-center my-5">Detail Information</h1>
-        <img class="d-block w-50 mx-auto" src="{{ Storage::url($item->travel_package->galleries[0]->image) }}" alt="First slide">
         <div class="row justify-content-center">
-            <div class="col-6 card my-3 px-3">
+            <div class="card my-3 px-3">
                 <h1 style="font-size: 20px; font-weight: bold" class="border-bottom mt-3">Trip Informations</h1>
                 <table class="trip-information">
                     <tr>
