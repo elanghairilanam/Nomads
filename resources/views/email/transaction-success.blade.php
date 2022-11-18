@@ -247,7 +247,7 @@
                                   <tbody>
                                     <tr>
                                       <td align="center" bgcolor="#ff9e53" role="presentation" style="border:none;border-radius:10px;cursor:auto;mso-padding-alt:10px 25px;background:#ff9e53;" valign="middle">
-                                        <a href="{{ url('checkout', $data->id) }}" style="display:inline-block;background:#ff9e53;color:#ffffff;font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:10px;"> Check Detail </a>
+                                        <a href="{{ url('checkdetail', $data->id) }}" style="display:inline-block;background:#ff9e53;color:#ffffff;font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;font-weight:bold;line-height:120%;margin:0;text-decoration:none;text-transform:none;padding:10px 25px;mso-padding-alt:0px;border-radius:10px;"> Check Detail </a>
                                       </td>
                                     </tr>
                                   </tbody>
