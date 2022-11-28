@@ -226,7 +226,7 @@
                             </tr>
                             <tr>
                               <td align="left" style="font-size:0px;padding:10px 25px;padding-right:25px;padding-left:25px;word-break:break-word;">
-                                <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color:#071c4d;font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:28px;table-layout:auto;width:100%;border:none;">
+                                <table cellpadding="0" cellspacing="0" width="100%" border="0" style="color        :#071c4d;font-family:Assistant, Helvetica, Arial, sans-serif;font-size:18px;line-height:28px;table-layout:auto;width:100%;border:none;">
                                   <tr>
                                     <td>Travel Details</td>
                                   </tr>

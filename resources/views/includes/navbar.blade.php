@@ -35,9 +35,43 @@
                     <li class="nav-item mx-md-2">
                         <a href="" class="nav-link">Testimonial</a>
                     </li>
+                    @auth
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            {{-- <span class="mr-2 d-none d-lg-inline text-gray-600 small">
+                                {{ Auth::user()->name }}
+                            </span> --}}
+                            <img class="img-profile rounded-circle"
+                            src="{{ url('backend/img/undraw_profile.svg') }}">
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="{{ route('myaccount') }}">Akun Saya</a></li>
+                            <li><a class="dropdown-item" href="{{ route('historytransactions') }}">Transaksi</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li>
+                                <form action="{{ route('logout') }}" method="post">
+                                    @csrf
+                                    <button type="submit" class="dropdown-item">Logout</button>
+                                </form>
+                            </li>
+                        </ul>
+                    </li>
+
+                    {{-- <div class="btn-group">
+                         <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        {{ Auth::user()->name }}
+                         </button>
+                    <div class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">Logout</a></li>
+                    </div>
+                    </div> --}}
+                    @endauth
                 </ul>
 
-                @auth
+                {{-- @auth
                 <form class="form-inline d-sm-block d-md-none" action="{{ route('logout') }}"
                 method="POST">
                 @csrf
@@ -54,7 +88,7 @@
                     Logout
                     </button>
                 </form>
-                @endauth
+                @endauth --}}
 
                 @guest
 

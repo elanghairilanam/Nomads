@@ -62,6 +62,14 @@ Route::get('/check-detail/{id}', 'App\Http\Controllers\CheckoutController@detail
 ->name('checkdetail')
 ->middleware(['auth', 'verified']);
 
+Route::get('/my-account', 'App\Http\Controllers\MyAccountController@index')
+->name('myaccount')
+->middleware(['auth', 'verified']);
+
+Route::get('/history-transactions', 'App\Http\Controllers\HistoryTransactionsController@index')
+->name('historytransactions')
+->middleware(['auth', 'verified']);
+
 
 Route::prefix('admin')
 ->namespace('App\Http\Controllers\Admin')

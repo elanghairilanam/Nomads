@@ -72,11 +72,8 @@
                         </td>
                     </tr>
                 </table>
-
             </div>
         </div>
     </div>
-
-
 </main>
 @endsection

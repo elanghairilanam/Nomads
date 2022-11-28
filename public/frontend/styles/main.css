@@ -447,4 +447,12 @@ header .btn-get-started:hover {
   font-size: 16px;
   text-align: center;
   color: #bfbfbf;
+}
+
+.img-profile {
+  width: 35px;
+}
+
+.container .card .text-left a {
+  color: black;
 }/*# sourceMappingURL=main.css.map */

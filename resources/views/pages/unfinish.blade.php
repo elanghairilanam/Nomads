@@ -3,7 +3,7 @@
 @section('title', 'Success Checkout')
 
 @section('content')
-<main>
+    <main>
         <div class="section-success d-flex align-items-center">
             <div class="col text-center">
                 {{-- <img src="{{ url('frontend/images/299045_sign_error_icon.png') }}" alt=""> --}}
