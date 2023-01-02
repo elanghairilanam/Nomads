@@ -162,6 +162,7 @@ header{
     }
 }
 
+//network
 .section-network{
     background-color: #fff;
     margin-top: -170px;
@@ -183,6 +184,7 @@ header{
     }
 }
 
+//testimonial
 .section-testimonial-heading{
     background: linear-gradient(#fff 0%,
     #f7f9ff 100%);
@@ -590,6 +592,16 @@ header{
                 a {
                     color: black;
                 }
+            }
+    }
+}
+
+//dashboard
+.container-fluid{
+    .card{
+        h5 {
+                text-align: center;
+                color: #0c2d79;
             }
     }
 }

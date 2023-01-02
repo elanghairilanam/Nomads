@@ -24,7 +24,7 @@
                         @foreach ($item as $row => $items)
                         <tr>
                             <th scope="row">{{ $row+1 }}</th>
-                            <td><a href="{{ route('detail', $items->travel_package->slug) }}" target="_blank">{{ $items->travel_package->title }}</a></td>
+                            <td><a href="{{ route('detail', $items->travel_package->slug) }}">{{ $items->travel_package->title }}</a></td>
                             <td>{{ $items->travel_package->location }}</td>
                             <td>{{ $items->travel_package->featured_event }}</td>
                             <td>{{ $items->travel_package->departure_date }}</td>

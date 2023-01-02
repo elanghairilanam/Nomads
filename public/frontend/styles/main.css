@@ -455,4 +455,9 @@ header .btn-get-started:hover {
 
 .container .card .text-left a {
   color: black;
+}
+
+.container-fluid .card h5 {
+  text-align: center;
+  color: #0c2d79;
 }/*# sourceMappingURL=main.css.map */

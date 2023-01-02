@@ -46,10 +46,6 @@
                                 @enderror
                                 {{-- <input type="password" class="form-control" id="exampleInputPassword"> --}}
                             </div>
-                            <div class="form-group form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck">
-                                <label class="form-check-label" for="exampleCheck">Remember Me</label>
-                            </div>
                             {{-- <button type="submit" class="btn btn-login btn-block">Submit</button>
                             <button type="submit" class="btn btn-login btn-block">Register</button> --}}
                                 <button type="submit" class="btn btn-login btn-block">

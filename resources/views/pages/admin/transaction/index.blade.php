@@ -7,6 +7,9 @@
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-800">Transaksi</h1>
+                        <div class="section-header-breadcrumb">
+                            <div class="breadcrumb-item active">Transaksi</div>
+                        </div>
                     </div>
 
                     <div class="row">
@@ -48,6 +51,9 @@
                                                         <i class="fa fa-trash"></i>
                                                     </button>
                                                 </form>
+                                                <button wire:click="export" class="btn btn-primary btn-sm">
+                                                    <i class="fas fa-download"></i>
+                                                </button>
                                             </td>
                                         </tr>
                                         @empty
@@ -66,4 +72,7 @@
 
                 </div>
 <!-- /.container-fluid -->
+<script>
+    
+</script>
 @endsection
