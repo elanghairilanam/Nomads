@@ -16,7 +16,7 @@
                         <a href="{{ route('home') }}" class="nav-link active">Home</a>
                     </li>
                     <li class="nav-item mx-md-2">
-                        <a href="" class="nav-link">Paket Travel</a>
+                        <a href="#travel" class="nav-link">Paket Travel</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
@@ -33,7 +33,7 @@
                         </ul>
                     </li>
                     <li class="nav-item mx-md-2">
-                        <a href="" class="nav-link">Testimonial</a>
+                        <a href="#testimonialHeading" class="nav-link">Testimonial</a>
                     </li>
                     @auth
                     <li class="nav-item dropdown">

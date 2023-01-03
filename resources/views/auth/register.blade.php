@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.success')
 
 @section('content')
 <div class="container">
@@ -82,6 +82,10 @@
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Register') }}
                                 </button>
+                                <button class="btn btn-login my-2 my-sm-0" type="button"
+                                onclick="event.preventDefault(); location.href='{{ route('login') }}';">
+                                Login
+                            </button>
                             </div>
                         </div>
                     </form>
