@@ -3,6 +3,7 @@ body{
     background-color: #ffffff;
     font-family:'Assistant',sans-serif;
     color: #071C4D;
+    background-attachment: fixed;
 }
 
 // navbar
@@ -596,12 +597,18 @@ header{
     }
 }
 
-//dashboard
-.container-fluid{
-    .card{
-        h5 {
+//akun saya
+.content{
+
+    background-color:#071C4D ;
+    justify-content: center;
+
+    .card-myacount {
+            padding: 5px;
+            margin: 10px;
+
+            h1 {
                 text-align: center;
-                color: #0c2d79;
             }
-    }
+        }
 }

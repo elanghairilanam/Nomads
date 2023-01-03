@@ -2,8 +2,8 @@
 @section('content')
 
 <main>
-    <div class="container d-flex align-items-center">
-        <div class="card">
+    <div class="container d-flex align-items-center content" style="margin-top: -66px">
+        <div class="card card-myacount" style="margin-top: 80px">
             <div class="col text-left">
                 <h1>Detail Akun</h1>
                 <form>

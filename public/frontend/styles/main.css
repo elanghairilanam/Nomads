@@ -2,6 +2,7 @@ body {
   background-color: #ffffff;
   font-family: "Assistant", sans-serif;
   color: #071C4D;
+  background-attachment: fixed;
 }
 
 .navbar-brand img {
@@ -457,7 +458,14 @@ header .btn-get-started:hover {
   color: black;
 }
 
-.container-fluid .card h5 {
+.content {
+  background-color: #071C4D;
+  justify-content: center;
+}
+.content .card-myacount {
+  padding: 5px;
+  margin: 10px;
+}
+.content .card-myacount h1 {
   text-align: center;
-  color: #0c2d79;
 }/*# sourceMappingURL=main.css.map */
