@@ -2,11 +2,11 @@
 @section('content')
 
 <main>
-    <div class="container d-flex align-items-center">
-        <div class="card">
+    <div class="container d-flex align-items-center content-history">
+        <div class="card card-body">
             <div class="col text-left">
                 <h1>Riwayat Pembelian</h1>
-                <table class="table">
+                <table class="table table-content">
                     <thead>
                         <tr>
                             <th scope="col">No</th>

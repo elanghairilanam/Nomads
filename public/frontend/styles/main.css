@@ -468,4 +468,19 @@ header .btn-get-started:hover {
 }
 .content .card-myacount h1 {
   text-align: center;
+}
+
+.content-history {
+  position: relative;
+  margin-top: 10px;
+  background-color: #071C4D;
+}
+.content-history h1 {
+  text-align: center;
+}
+.content-history .card-body {
+  margin: 10px;
+}
+.content-history .card-body .table-content {
+  position: relative;
 }/*# sourceMappingURL=main.css.map */

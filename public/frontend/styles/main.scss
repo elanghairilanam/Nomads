@@ -612,3 +612,22 @@ header{
             }
         }
 }
+
+//history
+.content-history{
+    position: relative;
+    margin-top:10px;
+    background-color: #071C4D;
+
+    h1{
+        text-align: center;
+    }
+
+    .card-body{
+        margin: 10px;
+
+        .table-content{
+            position:relative;
+        }
+    }
+}
